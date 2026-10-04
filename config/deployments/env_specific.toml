@@ -455,11 +455,11 @@ region = "bucket_region" # AWS region where the S3 bucket for theme storage is l
 bucket_name = "bucket"   # AWS S3 bucket name for theme storage
 
 [theme.email_config]
-entity_name = "Hyperswitch"                      # Name of the entity to be showed in emails
-entity_logo_url = "https://example.com/logo.svg" # Logo URL of the entity to be used in emails
-foreground_color = "#000000"                     # Foreground color of email text
-primary_color = "#006DF9"                        # Primary color of email body
-background_color = "#FFFFFF"                     # Background color of email body
+entity_name = "Avenra"                         # Display name in emails
+entity_logo_url = ""                           # Optional hosted logo; empty uses the text wordmark
+foreground_color = "#153c32"                   # Email text color
+primary_color = "#153c32"                      # Action color
+background_color = "#f7f8f2"                   # Email background color
 
 [connectors.unified_authentication_service] #Unified Authentication Service Configuration
 base_url = "http://localhost:8000" #base url to call unified authentication service

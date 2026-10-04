@@ -174,7 +174,7 @@ pub const DEFAULT_ENABLE_SAVED_PAYMENT_METHOD: bool = false;
 pub const DEFAULT_ENABLE_BUTTON_ONLY_ON_FORM_READY: bool = false;
 
 /// Default Payment Link Background color
-pub const DEFAULT_BACKGROUND_COLOR: &str = "#212E46";
+pub const DEFAULT_BACKGROUND_COLOR: &str = "#153c32";
 
 /// Default product Img Link
 pub const DEFAULT_PRODUCT_IMG: &str =

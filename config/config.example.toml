@@ -654,7 +654,7 @@ sts_role_session_name = "" # An identifier for the assumed role session, used to
 [user]
 password_validity_in_days = 90       # Number of days after which password should be updated
 two_factor_auth_expiry_in_secs = 300 # Number of seconds after which 2FA should be done again if doing update/change from inside
-totp_issuer_name = "Hyperswitch"     # Name of the issuer for TOTP
+totp_issuer_name = "Avenra"     # Name of the issuer for TOTP
 base_url = ""                        # Base url used for user specific redirects and emails
 force_two_factor_auth = false        # Whether to force two factor authentication for all users
 force_cookies = false                # Whether to use only cookies for JWT extraction and authentication
@@ -1527,11 +1527,11 @@ service = "dynamo" # Service name
 file_storage_backend = "file_system" # Theme storage backend to be used
 
 [theme.email_config]
-entity_name = "Hyperswitch"                                                      # Display name in emails
-entity_logo_url = "https://app.hyperswitch.io/email-assets/HyperswitchLogo.png"  # Logo URL for emails
-foreground_color = "#111326"                                                     # Text color
-primary_color = "#006DF9"                                                        # Primary color
-background_color = "#FFFFFF"                                                     # Email background color
+entity_name = "Avenra"                                                      # Display name in emails
+entity_logo_url = ""                                                           # Optional publicly hosted logo; text wordmark is used when empty
+foreground_color = "#153c32"                                                     # Text color
+primary_color = "#153c32"                                                        # Primary color
+background_color = "#f7f8f2"                                                     # Email background color
 
 [billing_connectors_payment_sync]
 billing_connectors_which_require_payment_sync = "stripebilling, recurly" # List of billing connectors which has payment sync api call

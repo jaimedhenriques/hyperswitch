@@ -379,10 +379,10 @@ function initializeEventListeners(paymentDetails) {
     }
   } else if (window.innerWidth > 1199) {
     if (hyperCheckoutNode instanceof HTMLDivElement) {
-      hyperCheckoutNode.style.color = "#333333";
+      hyperCheckoutNode.style.color = "#153c32";
     }
     if (hyperCheckoutFooterNode instanceof HTMLDivElement) {
-      hyperCheckoutFooterNode.style.backgroundColor = "#F5F5F5";
+      hyperCheckoutFooterNode.style.backgroundColor = "#f7f8f2";
     }
   }
 
@@ -869,20 +869,20 @@ function renderDescription(paymentDetails) {
 
 /**
  * Uses
- *    - Creates and returns a div element with the HyperSwitch branding SVG
+ *    - Creates and returns a div element with the Avenra branding SVG
  * @param {String} wrapperId 
  * @returns {HTMLDivElement} brandingWrapperNode
  */
 function createHyperSwitchBrandingSVGElement(wrapperId) {
   var brandingWrapperNode = document.createElement("div");
   brandingWrapperNode.id = wrapperId;
-  brandingWrapperNode.innerHTML = '<svg class="fill-current" height="18" width="130"><use xlink:href="#hyperswitch-brand" x="0" y="0" height="18" width="130"></use></svg>';
+  brandingWrapperNode.innerHTML = '<svg class="fill-current" role="img" aria-label="Powered by Avenra" height="18" width="130"><use xlink:href="#hyperswitch-brand" x="0" y="0" height="18" width="130"></use></svg>';
   return brandingWrapperNode;
 }
 
 /**
  * Uses
- *    - Creates and appends HyperSwitch branding in appropriate sections based on the viewport dimensions (web vs mobile views)
+ *    - Creates and appends Avenra branding in appropriate sections based on the viewport dimensions (web vs mobile views)
  * @param {PaymentDetails} paymentDetails
  */
 function renderBranding(paymentDetails) {

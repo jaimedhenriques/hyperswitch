@@ -123,7 +123,7 @@ master_enc_key = "73ad7bbbbc640c845a150f67d058b279849370cd2c1f3c67c4dd6c869213e1
 [user]
 password_validity_in_days = 90
 two_factor_auth_expiry_in_secs = 300
-totp_issuer_name = "Hyperswitch"
+totp_issuer_name = "Avenra"
 base_url = "http://localhost:9000"
 force_two_factor_auth = false
 force_cookies = false
@@ -1518,11 +1518,11 @@ timeout = 10 # Timeout for SMTP connection in seconds
 connection = "plaintext" #currently plaintext and starttls are supported
 
 [theme.email_config]
-entity_name = "Hyperswitch"                                                      # Display name in emails
-entity_logo_url = "https://app.hyperswitch.io/email-assets/HyperswitchLogo.png"  # Logo URL for emails
-foreground_color = "#111326"                                                     # Text color
-primary_color = "#006DF9"                                                        # Primary color
-background_color = "#FFFFFF"                                                     # Email background color
+entity_name = "Avenra"                                                      # Display name in emails
+entity_logo_url = ""                                                           # Optional publicly hosted logo; text wordmark is used when empty
+foreground_color = "#153c32"                                                     # Text color
+primary_color = "#153c32"                                                        # Primary color
+background_color = "#f7f8f2"                                                     # Email background color
 
 [platform]
 enabled = true

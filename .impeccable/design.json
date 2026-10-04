@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T21:34:09.691247+00:00",
+  "title": "Design System: Avenra",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.04779 173.72)",
+          "oklch(26% 0.04779 173.72)",
+          "oklch(37% 0.04779 173.72)",
+          "oklch(48% 0.04779 173.72)",
+          "oklch(59% 0.04779 173.72)",
+          "oklch(70% 0.04779 173.72)",
+          "oklch(81% 0.04779 173.72)",
+          "oklch(95% 0.04779 173.72)"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Green",
+        "tonalRamp": [
+          "oklch(15% 0.07489 165.26)",
+          "oklch(26% 0.07489 165.26)",
+          "oklch(37% 0.07489 165.26)",
+          "oklch(48% 0.07489 165.26)",
+          "oklch(59% 0.07489 165.26)",
+          "oklch(70% 0.07489 165.26)",
+          "oklch(81% 0.07489 165.26)",
+          "oklch(95% 0.07489 165.26)"
+        ]
+      },
+      "lime": {
+        "role": "secondary",
+        "displayName": "Lime",
+        "tonalRamp": [
+          "oklch(15% 0.12910 119.97)",
+          "oklch(26% 0.12910 119.97)",
+          "oklch(37% 0.12910 119.97)",
+          "oklch(48% 0.12910 119.97)",
+          "oklch(59% 0.12910 119.97)",
+          "oklch(70% 0.12910 119.97)",
+          "oklch(81% 0.12910 119.97)",
+          "oklch(95% 0.12910 119.97)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.00798 114.22)",
+          "oklch(26% 0.00798 114.22)",
+          "oklch(37% 0.00798 114.22)",
+          "oklch(48% 0.00798 114.22)",
+          "oklch(59% 0.00798 114.22)",
+          "oklch(70% 0.00798 114.22)",
+          "oklch(81% 0.00798 114.22)",
+          "oklch(95% 0.00798 114.22)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.01896 162.28)",
+          "oklch(26% 0.01896 162.28)",
+          "oklch(37% 0.01896 162.28)",
+          "oklch(48% 0.01896 162.28)",
+          "oklch(59% 0.01896 162.28)",
+          "oklch(70% 0.01896 162.28)",
+          "oklch(81% 0.01896 162.28)",
+          "oklch(95% 0.01896 162.28)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.01195 133.38)",
+          "oklch(26% 0.01195 133.38)",
+          "oklch(37% 0.01195 133.38)",
+          "oklch(48% 0.01195 133.38)",
+          "oklch(59% 0.01195 133.38)",
+          "oklch(70% 0.01195 133.38)",
+          "oklch(81% 0.01195 133.38)",
+          "oklch(95% 0.01195 133.38)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26% 0.00000 89.88)",
+          "oklch(37% 0.00000 89.88)",
+          "oklch(48% 0.00000 89.88)",
+          "oklch(59% 0.00000 89.88)",
+          "oklch(70% 0.00000 89.88)",
+          "oklch(81% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "workspace-canvas": {
+        "role": "neutral",
+        "displayName": "Workspace Canvas",
+        "tonalRamp": [
+          "oklch(15% 0.00692 124.45)",
+          "oklch(26% 0.00692 124.45)",
+          "oklch(37% 0.00692 124.45)",
+          "oklch(48% 0.00692 124.45)",
+          "oklch(59% 0.00692 124.45)",
+          "oklch(70% 0.00692 124.45)",
+          "oklch(81% 0.00692 124.45)",
+          "oklch(95% 0.00692 124.45)"
+        ]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "Sidebar",
+        "tonalRamp": [
+          "oklch(15% 0.04910 174.16)",
+          "oklch(26% 0.04910 174.16)",
+          "oklch(37% 0.04910 174.16)",
+          "oklch(48% 0.04910 174.16)",
+          "oklch(59% 0.04910 174.16)",
+          "oklch(70% 0.04910 174.16)",
+          "oklch(81% 0.04910 174.16)",
+          "oklch(95% 0.04910 174.16)"
+        ]
+      },
+      "workspace-button-text": {
+        "role": "neutral",
+        "displayName": "Workspace Button Text",
+        "tonalRamp": [
+          "oklch(15% 0.02146 118.22)",
+          "oklch(26% 0.02146 118.22)",
+          "oklch(37% 0.02146 118.22)",
+          "oklch(48% 0.02146 118.22)",
+          "oklch(59% 0.02146 118.22)",
+          "oklch(70% 0.02146 118.22)",
+          "oklch(81% 0.02146 118.22)",
+          "oklch(95% 0.02146 118.22)"
+        ]
+      },
+      "workspace-button-hover": {
+        "role": "neutral",
+        "displayName": "Workspace Button Hover",
+        "tonalRamp": [
+          "oklch(15% 0.06372 165.05)",
+          "oklch(26% 0.06372 165.05)",
+          "oklch(37% 0.06372 165.05)",
+          "oklch(48% 0.06372 165.05)",
+          "oklch(59% 0.06372 165.05)",
+          "oklch(70% 0.06372 165.05)",
+          "oklch(81% 0.06372 165.05)",
+          "oklch(95% 0.06372 165.05)"
+        ]
+      },
+      "card-border": {
+        "role": "neutral",
+        "displayName": "Card Border",
+        "tonalRamp": [
+          "oklch(15% 0.01603 130.43)",
+          "oklch(26% 0.01603 130.43)",
+          "oklch(37% 0.01603 130.43)",
+          "oklch(48% 0.01603 130.43)",
+          "oklch(59% 0.01603 130.43)",
+          "oklch(70% 0.01603 130.43)",
+          "oklch(81% 0.01603 130.43)",
+          "oklch(95% 0.01603 130.43)"
+        ]
+      },
+      "input-border": {
+        "role": "neutral",
+        "displayName": "Input Border",
+        "tonalRamp": [
+          "oklch(15% 0.02717 127.76)",
+          "oklch(26% 0.02717 127.76)",
+          "oklch(37% 0.02717 127.76)",
+          "oklch(48% 0.02717 127.76)",
+          "oklch(59% 0.02717 127.76)",
+          "oklch(70% 0.02717 127.76)",
+          "oklch(81% 0.02717 127.76)",
+          "oklch(95% 0.02717 127.76)"
+        ]
+      },
+      "input-text": {
+        "role": "neutral",
+        "displayName": "Input Text",
+        "tonalRamp": [
+          "oklch(15% 0.08211 138.05)",
+          "oklch(26% 0.08211 138.05)",
+          "oklch(37% 0.08211 138.05)",
+          "oklch(48% 0.08211 138.05)",
+          "oklch(59% 0.08211 138.05)",
+          "oklch(70% 0.08211 138.05)",
+          "oklch(81% 0.08211 138.05)",
+          "oklch(95% 0.08211 138.05)"
+        ]
+      },
+      "success": {
+        "role": "neutral",
+        "displayName": "Success",
+        "tonalRamp": [
+          "oklch(15% 0.09032 136.90)",
+          "oklch(26% 0.09032 136.90)",
+          "oklch(37% 0.09032 136.90)",
+          "oklch(48% 0.09032 136.90)",
+          "oklch(59% 0.09032 136.90)",
+          "oklch(70% 0.09032 136.90)",
+          "oklch(81% 0.09032 136.90)",
+          "oklch(95% 0.09032 136.90)"
+        ]
+      },
+      "success-surface": {
+        "role": "neutral",
+        "displayName": "Success Surface",
+        "tonalRamp": [
+          "oklch(15% 0.02033 131.45)",
+          "oklch(26% 0.02033 131.45)",
+          "oklch(37% 0.02033 131.45)",
+          "oklch(48% 0.02033 131.45)",
+          "oklch(59% 0.02033 131.45)",
+          "oklch(70% 0.02033 131.45)",
+          "oklch(81% 0.02033 131.45)",
+          "oklch(95% 0.02033 131.45)"
+        ]
+      },
+      "pending": {
+        "role": "neutral",
+        "displayName": "Pending",
+        "tonalRamp": [
+          "oklch(15% 0.09468 91.06)",
+          "oklch(26% 0.09468 91.06)",
+          "oklch(37% 0.09468 91.06)",
+          "oklch(48% 0.09468 91.06)",
+          "oklch(59% 0.09468 91.06)",
+          "oklch(70% 0.09468 91.06)",
+          "oklch(81% 0.09468 91.06)",
+          "oklch(95% 0.09468 91.06)"
+        ]
+      },
+      "pending-surface": {
+        "role": "neutral",
+        "displayName": "Pending Surface",
+        "tonalRamp": [
+          "oklch(15% 0.02858 91.64)",
+          "oklch(26% 0.02858 91.64)",
+          "oklch(37% 0.02858 91.64)",
+          "oklch(48% 0.02858 91.64)",
+          "oklch(59% 0.02858 91.64)",
+          "oklch(70% 0.02858 91.64)",
+          "oklch(81% 0.02858 91.64)",
+          "oklch(95% 0.02858 91.64)"
+        ]
+      },
+      "failed": {
+        "role": "neutral",
+        "displayName": "Failed",
+        "tonalRamp": [
+          "oklch(15% 0.10359 34.76)",
+          "oklch(26% 0.10359 34.76)",
+          "oklch(37% 0.10359 34.76)",
+          "oklch(48% 0.10359 34.76)",
+          "oklch(59% 0.10359 34.76)",
+          "oklch(70% 0.10359 34.76)",
+          "oklch(81% 0.10359 34.76)",
+          "oklch(95% 0.10359 34.76)"
+        ]
+      },
+      "failed-surface": {
+        "role": "neutral",
+        "displayName": "Failed Surface",
+        "tonalRamp": [
+          "oklch(15% 0.01409 39.42)",
+          "oklch(26% 0.01409 39.42)",
+          "oklch(37% 0.01409 39.42)",
+          "oklch(48% 0.01409 39.42)",
+          "oklch(59% 0.01409 39.42)",
+          "oklch(70% 0.01409 39.42)",
+          "oklch(81% 0.01409 39.42)",
+          "oklch(95% 0.01409 39.42)"
+        ]
+      },
+      "refunded": {
+        "role": "neutral",
+        "displayName": "Refunded",
+        "tonalRamp": [
+          "oklch(15% 0.09582 307.02)",
+          "oklch(26% 0.09582 307.02)",
+          "oklch(37% 0.09582 307.02)",
+          "oklch(48% 0.09582 307.02)",
+          "oklch(59% 0.09582 307.02)",
+          "oklch(70% 0.09582 307.02)",
+          "oklch(81% 0.09582 307.02)",
+          "oklch(95% 0.09582 307.02)"
+        ]
+      },
+      "refunded-surface": {
+        "role": "neutral",
+        "displayName": "Refunded Surface",
+        "tonalRamp": [
+          "oklch(15% 0.01497 298.56)",
+          "oklch(26% 0.01497 298.56)",
+          "oklch(37% 0.01497 298.56)",
+          "oklch(48% 0.01497 298.56)",
+          "oklch(59% 0.01497 298.56)",
+          "oklch(70% 0.01497 298.56)",
+          "oklch(81% 0.01497 298.56)",
+          "oklch(95% 0.01497 298.56)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Company headline default; responsive variants are documented in Layout and Typography."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Recurring company section heading."
+      },
+      "workspace-heading": {
+        "displayName": "Workspace Heading",
+        "purpose": "Operational page title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Readable workspace card heading after the final override."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Workspace default body copy."
+      },
+      "intro": {
+        "displayName": "Intro",
+        "purpose": "Company introduction copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Shared company action label."
+      },
+      "workspace-label": {
+        "displayName": "Workspace Label",
+        "purpose": "Workspace action label after the final override."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Workspace destination label."
+      },
+      "status": {
+        "displayName": "Status",
+        "purpose": "Labelled operational payment state."
+      }
+    },
+    "shadows": [
+      {
+        "name": "workspace-card",
+        "value": "0 2px 2px #1a3e2402",
+        "purpose": "Normal operational panels."
+      },
+      {
+        "name": "payment-node",
+        "value": "0 4px 12px #183c3210",
+        "purpose": "Lightly lifted payment node in a routing diagram."
+      },
+      {
+        "name": "workspace-preview",
+        "value": "0 18px 40px #061b2429",
+        "purpose": "Product preview on a dark surface."
+      },
+      {
+        "name": "dialog",
+        "value": "0 24px 75px #10271e33",
+        "purpose": "Modal and detail overlays."
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 25px #153a2420",
+        "purpose": "Transient workspace feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Routing travel indicator easing."
+      },
+      {
+        "name": "shared-state",
+        "value": "200ms",
+        "purpose": "Shared buttons and navigation color changes."
+      },
+      {
+        "name": "workspace-control",
+        "value": "180ms",
+        "purpose": "Operational button color and border changes."
+      },
+      {
+        "name": "overlay-enter",
+        "value": "180ms ease-out",
+        "purpose": "Workspace overlay fade."
+      },
+      {
+        "name": "drawer-enter",
+        "value": "200ms ease-out",
+        "purpose": "Workspace detail drawer slide."
+      },
+      {
+        "name": "routing-travel",
+        "value": "2.5s, 2 iterations",
+        "purpose": "Finite diagram indicator motion; not an infinite loop."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms globally; none for workspace transitions and animations",
+        "purpose": "Honor prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "workspace-narrow",
+        "value": "360px"
+      },
+      {
+        "name": "workspace-small",
+        "value": "480px"
+      },
+      {
+        "name": "company-mobile",
+        "value": "600px"
+      },
+      {
+        "name": "workspace-mobile",
+        "value": "760px"
+      },
+      {
+        "name": "company-stack",
+        "value": "850px"
+      },
+      {
+        "name": "workspace-stack",
+        "value": "1000px"
+      },
+      {
+        "name": "company-compact",
+        "value": "1150px"
+      },
+      {
+        "name": "workspace-compact",
+        "value": "1200px"
+      },
+      {
+        "name": "wide",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Shared company-page action with a restrained evergreen hover.",
+      "html": "<button class=\"ds-button-primary\">Explore the workspace<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border:1px solid transparent;border-radius:8px;font-family:Manrope,Arial,sans-serif;font-size:14px;font-weight:650;text-decoration:none;transition:background .2s,color .2s;cursor:pointer;background:var(--ink,#153c32);color:var(--white,#ffffff)}.ds-button-primary:hover{background:var(--green,#1d5c45)}.ds-button-primary:focus-visible{outline:3px solid #438467;outline-offset:4px;}.ds-button-primary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none;animation:none}}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A pale bordered alternative to the shared primary action.",
+      "html": "<button class=\"ds-button-secondary\">View source</button>",
+      "css": ".ds-button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border:1px solid transparent;border-radius:8px;font-family:Manrope,Arial,sans-serif;font-size:14px;font-weight:650;text-decoration:none;transition:background .2s,color .2s;cursor:pointer;background:var(--white,#ffffff);border-color:var(--line,#e2e7df);color:var(--ink,#153c32)}.ds-button-secondary:hover{background:#eef2e8}.ds-button-secondary:focus-visible{outline:3px solid #438467;outline-offset:4px;}.ds-button-secondary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition:none;animation:none}}"
+    },
+    {
+      "name": "Lime button",
+      "kind": "button",
+      "refersTo": "button-lime",
+      "description": "A bright action for an evergreen surface.",
+      "html": "<div class=\"ds-dark-surface\"><button class=\"ds-button-lime\">Step inside the demo<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button></div>",
+      "css": ".ds-dark-surface{background:var(--ink,#153c32);padding:24px;border-radius:12px}.ds-button-lime{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border:1px solid transparent;border-radius:8px;font-family:Manrope,Arial,sans-serif;font-size:14px;font-weight:650;text-decoration:none;transition:background .2s,color .2s;cursor:pointer;padding:14px 20px;font-size:13px;background:var(--lime,#d7ef8a);color:var(--ink,#153c32)}.ds-button-lime:hover{background:#e5f6b3}.ds-button-lime:focus-visible{outline:3px solid #438467;outline-offset:4px;}.ds-button-lime:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-lime,.ds-dark-surface{transition:none;animation:none}}"
+    },
+    {
+      "name": "Workspace primary button",
+      "kind": "button",
+      "refersTo": "workspace-button-primary",
+      "description": "A compact operational action with the final readable label size.",
+      "html": "<button class=\"ds-workspace-button\">Save demo routing</button>",
+      "css": ".ds-workspace-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:6px;padding:9px 12px;min-height:36px;font-family:Manrope,Arial,sans-serif;font-size:12px;line-height:1.5;font-weight:600;white-space:nowrap;background:var(--green,#1d5c45);color:#f4f8e8;border:1px solid var(--green,#1d5c45);transition:background .18s,border-color .18s,color .18s;cursor:pointer}.ds-workspace-button:hover:not(:disabled){background:#174a37}.ds-workspace-button:focus-visible{outline:2px solid #6d9850;outline-offset:4px;}.ds-workspace-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-workspace-button{transition:none;animation:none}}"
+    },
+    {
+      "name": "Workspace field",
+      "kind": "input",
+      "refersTo": "workspace-input",
+      "description": "A labelled merchant field with workspace focus treatment.",
+      "html": "<label class=\"ds-field\"><span>Merchant name</span><input type=\"text\" value=\"Avenra demo\" placeholder=\"Enter a name\"/></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:8px;color:#617750;font-family:Manrope,Arial,sans-serif;font-weight:550;font-size:12px;line-height:1.5;max-width:320px}.ds-field input{width:100%;background:var(--white,#ffffff);border:1px solid #dce5d2;border-radius:6px;padding:11px 12px;font-family:Manrope,Arial,sans-serif;font-size:12px;line-height:1.5;font-weight:550;color:#36582a;min-height:39px;caret-color:var(--green,#1d5c45)}.ds-field input::placeholder{color:#9eaf91;font-weight:400}.ds-field input:focus-visible{outline:2px solid #6d9850;outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-field{transition:none;animation:none}}"
+    },
+    {
+      "name": "Workspace navigation",
+      "kind": "nav",
+      "refersTo": "workspace-navigation",
+      "description": "Sidebar destinations with a lime active state and explicit focus.",
+      "html": "<nav class=\"ds-navigation\" aria-label=\"Workspace preview\"><button class=\"ds-nav-item ds-nav-active\" aria-current=\"page\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/></svg>Overview<span class=\"ds-nav-indicator\"></span></button><button class=\"ds-nav-item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M2 10h20M6 15h3\"/></svg>Payments</button></nav>",
+      "css": ".ds-navigation{display:flex;flex-direction:column;gap:4px;max-width:244px;background:#123b31;padding:20px;border-radius:10px}.ds-nav-item{display:flex;align-items:center;gap:13px;width:100%;border:0;border-radius:7px;background:transparent;color:#b4c8b9;padding:12px 15px;text-align:left;font-family:Manrope,Arial,sans-serif;font-size:13px;line-height:1.5;transition:background .2s,color .2s;cursor:pointer}.ds-nav-item:hover{color:#f1f6e9;background:#234c3d}.ds-nav-item:focus-visible{outline:2px solid #6d9850;outline-offset:4px;}.ds-nav-active,.ds-nav-active:hover{background:var(--lime,#d7ef8a);color:#244b34;font-weight:650}.ds-nav-indicator{width:5px;height:5px;background:#386245;border-radius:50%;margin-left:auto}@media(prefers-reduced-motion:reduce){.ds-nav-active,.ds-nav-indicator,.ds-nav-item,.ds-navigation{transition:none;animation:none}}"
+    },
+    {
+      "name": "Payment statuses",
+      "kind": "chip",
+      "refersTo": "status-succeeded",
+      "description": "Each payment state pairs a label, colored dot, and pale background.",
+      "html": "<div class=\"ds-status-list\"><span class=\"ds-status ds-success\"><span></span>Succeeded</span><span class=\"ds-status ds-pending\"><span></span>Pending</span><span class=\"ds-status ds-failed\"><span></span>Failed</span><span class=\"ds-status ds-refunded\"><span></span>Refunded</span></div>",
+      "css": ".ds-status-list{display:flex;flex-wrap:wrap;gap:8px}.ds-status{display:inline-flex;align-items:center;gap:5px;font-family:Manrope,Arial,sans-serif;font-size:10px;line-height:1.5;font-weight:550;border-radius:4px;padding:4px 6px;white-space:nowrap}.ds-status>span{width:4px;height:4px;border-radius:50%;background:currentColor}.ds-success{color:#476c37;background:#edf5e7}.ds-pending{color:#80691f;background:#fbf4df}.ds-failed{color:#974d3b;background:#fbefeb}.ds-refunded{color:#70528c;background:#f1eef9}@media(prefers-reduced-motion:reduce){.ds-failed,.ds-pending,.ds-refunded,.ds-status,.ds-status-list,.ds-success{transition:none;animation:none}}"
+    },
+    {
+      "name": "Workspace card",
+      "kind": "card",
+      "refersTo": "workspace-card",
+      "description": "A quiet operational panel with a readable title and supporting copy.",
+      "html": "<section class=\"ds-card\"><div class=\"ds-card-head\"><div><h2>Recent payments</h2><p>Sample transactions in your workspace</p></div></div></section>",
+      "css": ".ds-card{background:var(--white,#ffffff);color:var(--ink,#153c32);border:1px solid #e1e7dc;border-radius:10px;min-width:0;box-shadow:0 2px 2px #1a3e2402;font-family:Manrope,Arial,sans-serif;line-height:1.5;max-width:400px}.ds-card-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:20px 22px 14px}.ds-card-head h2{margin:0;font-size:15px;font-weight:600}.ds-card-head p{margin:4px 0 0;color:var(--muted,#66736c);font-size:12px}@media(prefers-reduced-motion:reduce){.ds-card,.ds-card-head{transition:none;animation:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Clear Payment Path",
+    "overview": "Avenra makes payment activity feel composed and legible. Deep evergreen anchors the identity, warm ivory creates reading space, and lime marks a deliberate choice. The visual language pairs confident, closely spaced headings with precise tables, labelled statuses, and compact operational controls.\n\nUse the original A mark, locally hosted Manrope, restrained borders, and short state transitions as the common vocabulary. The company site can breathe while the merchant workspace remains denser; both use the same palette and attention to clear outcomes. These are implementation-derived conventions for the working Avenra identity.",
+    "keyCharacteristics": [
+      "Evergreen structure, ivory reading surfaces, and lime selected states.",
+      "Manrope headings and tabular payment amounts.",
+      "Quiet bordered cards and compact, labelled controls.",
+      "Visible keyboard focus and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Foreground Rule",
+        "body": "Use evergreen text on lime, and white or ivory text on evergreen. Lime on a light surface is an accent rather than small body text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Status Rule",
+        "body": "Every payment status carries a text label. Its colored dot and tinted background reinforce that label.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Rule",
+        "body": "Keep operational text at the final readability overrides: default desktop controls and table content use 12px, navigation uses 13px, and status badges use 10px. Do not copy superseded smaller base declarations when extending the workspace.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "Separate normal workspace cards with a light border and an almost imperceptible shadow. Stronger shadows identify overlays or lifted previews.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reuse the evergreen, lime, and ivory color assignments from the normative frontmatter.",
+      "Do use the original A mark and self-hosted Manrope across new product surfaces.",
+      "Do pair status colors with readable text and align amounts with tabular numerals.",
+      "Do preserve visible keyboard focus, accessible control names, and reduced-motion behavior.",
+      "Do keep sample data and demo actions visibly identified."
+    ],
+    "donts": [
+      "Don't substitute a different mark, remotely loaded display font, or unrelated accent palette.",
+      "Don't communicate a payment outcome through color alone.",
+      "Don't shrink new operational labels to the superseded tiny base styles.",
+      "Don't add looping decorative motion to the implemented finite routing animation.",
+      "Don't treat the demonstration UI as evidence of a live payment service."
+    ]
+  }
+}

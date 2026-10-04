@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Hyperswitch",
+  "name": "Avenra",
   "colors": {
-    "primary": "#4F8EFF",
-    "light": "#6BA3FF",
-    "dark": "#2563EB"
+    "primary": "#153C32",
+    "light": "#D7EF8A",
+    "dark": "#D7EF8A"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -834,39 +834,30 @@
   },
   "background": {
     "color": {
-      "light": "#FAFBFC",
-      "dark": "#1d1d1d"
+      "light": "#F7F8F2",
+      "dark": "#102820"
     }
   },
   "navbar": {
     "links": [
       {
-        "label": "Contact Us",
-        "href": "https://inviter.co/hyperswitch-slack"
+        "label": "Repository",
+        "href": "https://github.com/jaimedhenriques/hyperswitch"
       },
       {
-        "label": "Explore with Deepwiki",
-        "href": "https://deepwiki.com/juspay/hyperswitch"
+        "label": "Web app setup",
+        "href": "https://github.com/jaimedhenriques/hyperswitch/tree/main/web"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Self-Deploy",
-      "href": "https://docs.hyperswitch.io/hyperswitch-open-source/overview"
+      "label": "Getting started",
+      "href": "/introduction"
     }
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/juspay/hyperswitch",
-      "linkedin": "https://www.linkedin.com/company/hyperswitch"
-    }
-  },
-  "integrations": {
-    "gtm": {
-      "tagId": "GTM-PLBNKQFQ"
-    },
-    "mixpanel": {
-      "projectToken": "b00355f29d9548d1333608df71d5d53d"
+      "github": "https://github.com/jaimedhenriques/hyperswitch"
     }
   },
   "contextual": {

@@ -1,161 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Invite User</title>
-</head>
-
-<body style="
-      background-color: #f8f9fb; /*outer wrapper*/
-      height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-    ">
-  <div style="
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        background-color: #f8f9fb; /*outer wrapper*/
-      ">
-    <table style="text-align: center; width: 100%">
-      <tr>
-        <td style="height: 6px"></td>
-      </tr>
-      <tr>
-        <td style="text-align: center">
-          <table style="
-                background-color: {background_color};
-                text-align: center;
-                max-width: 55%;
-                margin: auto;
-              ">
-            <tr>
-              <td style="height: 20px"></td>
-            </tr>
-            <tr>
-              <td>
-                <table style="width: 100%">
-                  <tr>
-                    <td style="text-align: center">
-                      <img src={entity_logo_url} alt={entity_name} style="
-                            text-align: center;
-                            height: auto;
-                            width: 4rem;
-                          " />
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 40px"></td>
-            </tr>
-            <tr>
-              <td style="
-                    font-size: 2.02rem;
-                    font-weight: 600;
-                    line-height: 2.5rem;
-                    color: {foreground_color};
-                    min-width: 550px;
-                  ">
-                Welcome to {entity_name}!
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 10px"></td>
-            </tr>
-            <tr>
-              <td style="
-                    color: {foreground_color};
-                    opacity:0.8;
-                    width: 50%;
-                    font-size: 1.02rem;
-                    font-weight: 400;
-                    line-height: 1.4rem;
-                    min-width: 300px;
-                  ">
-                <table style="
-                      width: 50%;
-                      min-width: 440px;
-                      text-align: center;
-                      margin: auto;
-                    ">
-                  <tr>
-                    <td>
-                      Hi {username}, you have received this email because your
-                      administrator has invited you as a new user on
-                      {entity_name}.
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 30px"></td>
-            </tr>
-            <tr>
-              <td>
-                <a href="{link}" style="
-                      text-decoration: none;
-                      border: none;
-                      border-radius: 64px;
-                      font-size: 1.02rem;
-                      color: #ffffff;
-                      font-weight: 500;
-                      line-height: 1.5rem;
-                      width: 50%;
-                      padding: 0.9rem 4rem;
-                      background: {primary_color};
-                      min-width: 18rem;
-                      max-width: 25rem;
-                      cursor: pointer;
-                    ">
-                  Click here to join
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 30px"></td>
-            </tr>
-            <tr>
-              <td style="
-                    color: {foreground_color};
-                    opacity:0.8;
-                    width: 50%;
-                    font-size: 1.02rem;
-                    font-weight: 400;
-                    line-height: 1.4rem;
-                    min-width: 300px;
-                  ">
-                <table style="
-                      width: 50%;
-                      min-width: 500px;
-                      text-align: center;
-                      margin: auto;
-                    ">
-                  <tr>
-                    <td>
-                      If the link has already expired, you can request a new
-                      link from your administrator or reach out to your
-                      internal support for more assistance.
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 70px"></td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td style="height: 6px"></td>
-      </tr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>You are invited</title>
+  </head>
+  <body style="margin:0;padding:0;background:{background_color};color:{foreground_color};font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:{background_color};">
+      <tr><td align="center" style="padding:24px 16px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;text-align:left;">
+          <tr><td style="padding:16px 0 28px;border-bottom:1px solid #cbd4c7;">
+            {entity_logo_html}
+            <span style="color:{foreground_color};font-size:30px;font-weight:700;line-height:36px;letter-spacing:-0.6px;overflow-wrap:anywhere;">{entity_name}</span>
+          </td></tr>
+          <tr><td style="padding:32px 0 16px;">
+            <h1 style="margin:0;color:{foreground_color};font-size:28px;line-height:36px;font-weight:600;">Join your team.</h1>
+          </td></tr>
+          <tr><td style="color:{foreground_color};font-size:16px;line-height:26px;overflow-wrap:anywhere;">
+            <p style="margin:0 0 20px;">Hi {username},</p><p style="margin:0 0 20px;">You have been invited to {entity_name}. Accept your invitation to access your team's dashboard.</p><p style="margin:0 0 20px;">If you were not expecting this invitation, contact the person who invited you before continuing.</p>
+          </td></tr>
+          <tr><td style="padding:12px 0 28px;">
+                  <a href="{link}" style="display:inline-block;background:{primary_color};color:#ffffff;font-size:16px;font-weight:600;line-height:24px;text-decoration:none;border-radius:8px;padding:14px 24px;">Accept invitation</a>
+                </td></tr>
+          <tr><td style="padding:24px 0;border-top:1px solid #cbd4c7;color:{foreground_color};font-size:14px;line-height:22px;">
+            The {entity_name} team
+          </td></tr>
+        </table>
+      </td></tr>
     </table>
-  </div>
-</body>
-
+  </body>
 </html>

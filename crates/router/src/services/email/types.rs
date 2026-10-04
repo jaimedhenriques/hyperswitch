@@ -66,9 +66,11 @@ pub enum EmailBody {
         business_location: String,
         business_website: String,
         product_type: MerchantProductType,
+        theme_config: EmailThemeConfig,
     },
     ReconActivation {
         user_name: String,
+        theme_config: EmailThemeConfig,
     },
     ProFeatureRequest {
         feature_name: String,
@@ -80,6 +82,7 @@ pub enum EmailBody {
         expires_in: u8,
         api_key_name: String,
         prefix: String,
+        theme_config: EmailThemeConfig,
     },
     WelcomeToCommunity,
     RoleDeleted {
@@ -97,6 +100,22 @@ pub enum EmailBody {
 pub mod html {
     use crate::services::email::types::EmailBody;
 
+    fn email_logo_html(logo_url: &str) -> String {
+        if logo_url.trim().is_empty() {
+            return String::new();
+        }
+
+        let escaped_url = logo_url
+            .replace('&', "&amp;")
+            .replace('"', "&quot;")
+            .replace('<', "&lt;")
+            .replace('>', "&gt;");
+
+        format!(
+            "<img src=\"{escaped_url}\" alt=\"\" width=\"48\" style=\"display:block;height:auto;max-width:100%;margin-bottom:12px;\" />"
+        )
+    }
+
     pub fn get_html_body(email_body: EmailBody) -> String {
         match email_body {
             EmailBody::Verify {
@@ -111,7 +130,7 @@ pub mod html {
                     include_str!("assets/verify.html"),
                     link = link,
                     entity_name = entity_name,
-                    entity_logo_url = entity_logo_url,
+                    entity_logo_html = email_logo_html(&entity_logo_url),
                     primary_color = primary_color,
                     background_color = background_color,
                     foreground_color = foreground_color
@@ -131,7 +150,7 @@ pub mod html {
                     link = link,
                     username = user_name,
                     entity_name = entity_name,
-                    entity_logo_url = entity_logo_url,
+                    entity_logo_html = email_logo_html(&entity_logo_url),
                     primary_color = primary_color,
                     background_color = background_color,
                     foreground_color = foreground_color
@@ -151,7 +170,7 @@ pub mod html {
                     username = user_name,
                     link = link,
                     entity_name = entity_name,
-                    entity_logo_url = entity_logo_url,
+                    entity_logo_html = email_logo_html(&entity_logo_url),
                     primary_color = primary_color,
                     background_color = background_color,
                     foreground_color = foreground_color
@@ -172,7 +191,7 @@ pub mod html {
                     username = user_name,
                     link = link,
                     entity_name = entity_name,
-                    entity_logo_url = entity_logo_url,
+                    entity_logo_html = email_logo_html(&entity_logo_url),
                     primary_color = primary_color,
                     background_color = background_color,
                     foreground_color = foreground_color
@@ -193,16 +212,23 @@ pub mod html {
                     username = user_name,
                     link = link,
                     entity_name = entity_name,
-                    entity_logo_url = entity_logo_url,
+                    entity_logo_html = email_logo_html(&entity_logo_url),
                     primary_color = primary_color,
                     background_color = background_color,
                     foreground_color = foreground_color
                 )
             }
-            EmailBody::ReconActivation { user_name } => {
+            EmailBody::ReconActivation {
+                user_name,
+                theme_config,
+            } => {
                 format!(
                     include_str!("assets/recon_activation.html"),
                     username = user_name,
+                    entity_name = theme_config.entity_name,
+                    entity_logo_html = email_logo_html(&theme_config.entity_logo_url),
+                    background_color = theme_config.background_color,
+                    foreground_color = theme_config.foreground_color,
                 )
             }
             EmailBody::BizEmailProd {
@@ -212,6 +238,7 @@ pub mod html {
                 business_location,
                 business_website,
                 product_type,
+                theme_config,
             } => {
                 format!(
                     include_str!("assets/bizemailprod.html"),
@@ -220,7 +247,11 @@ pub mod html {
                     business_location = business_location,
                     business_website = business_website,
                     username = user_name,
-                    product_type = product_type
+                    product_type = product_type,
+                    entity_name = theme_config.entity_name,
+                    entity_logo_html = email_logo_html(&theme_config.entity_logo_url),
+                    background_color = theme_config.background_color,
+                    foreground_color = theme_config.foreground_color,
                 )
             }
             EmailBody::ProFeatureRequest {
@@ -229,7 +260,7 @@ pub mod html {
                 user_name,
                 user_email,
             } => format!(
-                "Dear Hyperswitch Support Team,
+                "Dear Avenra Support Team,
 
 Dashboard Pro Feature Request,
 Feature name  : {feature_name}
@@ -244,11 +275,16 @@ Email         : {user_email}
                 expires_in,
                 api_key_name,
                 prefix,
+                theme_config,
             } => format!(
                 include_str!("assets/api_key_expiry_reminder.html"),
                 api_key_name = api_key_name,
                 prefix = prefix,
                 expires_in = expires_in,
+                entity_name = theme_config.entity_name,
+                entity_logo_html = email_logo_html(&theme_config.entity_logo_url),
+                background_color = theme_config.background_color,
+                foreground_color = theme_config.foreground_color,
             ),
             EmailBody::WelcomeToCommunity => {
                 include_str!("assets/welcome_to_community.html").to_string()
@@ -270,7 +306,7 @@ Email         : {user_email}
                     entity_type = entity_type,
                     lineage_info = lineage_info,
                     entity_name = entity_name,
-                    entity_logo_url = entity_logo_url,
+                    entity_logo_html = email_logo_html(&entity_logo_url),
                     background_color = background_color,
                     foreground_color = foreground_color
                 )
@@ -565,6 +601,7 @@ impl EmailData for ReconActivation {
     async fn get_email_data(&self, _base_url: &str) -> CustomResult<EmailContents, EmailError> {
         let body = html::get_html_body(EmailBody::ReconActivation {
             user_name: self.user_name.clone().get_secret().expose(),
+            theme_config: self.theme_config.clone(),
         });
 
         Ok(EmailContents {
@@ -637,6 +674,7 @@ impl EmailData for BizEmailProd {
             business_location: self.business_location.clone(),
             business_website: self.business_website.clone(),
             product_type: self.product_type,
+            theme_config: self.theme_config.clone(),
         });
 
         Ok(EmailContents {
@@ -697,6 +735,7 @@ impl EmailData for ApiKeyExpiryReminder {
             expires_in: self.expires_in,
             api_key_name: self.api_key_name.clone(),
             prefix: self.prefix.clone(),
+            theme_config: self.theme_config.clone(),
         });
 
         Ok(EmailContents {
@@ -717,7 +756,7 @@ impl EmailData for WelcomeToCommunity {
         let body = html::get_html_body(EmailBody::WelcomeToCommunity);
 
         Ok(EmailContents {
-            subject: "Thank you for signing up on Hyperswitch Dashboard!".to_string(),
+            subject: "Welcome to Avenra".to_string(),
             body: external_services::email::IntermediateString::new(body),
             recipient: self.recipient_email.clone().into_inner(),
         })

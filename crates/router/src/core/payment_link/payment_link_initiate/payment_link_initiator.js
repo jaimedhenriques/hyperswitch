@@ -19,7 +19,7 @@ function initializeSDK() {
   var preloadSDKWithParams = paymentDetails.preloadSDKWithParams;
   var appearance = {
     variables: {
-      colorPrimary: paymentDetails.theme || "rgb(0, 109, 249)",
+      colorPrimary: paymentDetails.theme || "#153c32",
       fontFamily: "Work Sans, sans-serif",
       fontSizeBase: "16px",
       colorText: "rgb(51, 65, 85)",

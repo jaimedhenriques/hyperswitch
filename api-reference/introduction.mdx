@@ -1,64 +1,58 @@
 ---
 tags: "Getting Started"
-title: "👋 Welcome to Hyperswitch API Reference"
+title: "Welcome to Avenra API Reference"
 sidebarTitle: "Introduction"
 stoplight-id: "3lmsk7ocvq21v"
 icon: "rectangle-code"
 iconType: "solid"
 ---
 
-Hyperswitch provides a collection of APIs that enable you to process and manage payments. Our APIs accept and return JSON in the HTTP body and return standard HTTP response codes. You can consume the APIs directly using your favorite HTTP/REST library.
+Avenra is an original merchant experience built on the Hyperswitch payment platform. This reference documents the inherited backend APIs for [this fork](https://github.com/jaimedhenriques/hyperswitch). Requests and responses use JSON over HTTP with standard response codes.
+
+<Note>
+  The Avenra web workspace is a sample-data demo. It does not issue API keys or process payments. Run and configure the backend separately to use the APIs documented here. See the [web app setup](https://github.com/jaimedhenriques/hyperswitch/tree/main/web) and [repository guide](https://github.com/jaimedhenriques/hyperswitch#start-the-avenra-web-app).
+</Note>
 
 <CardGroup cols={2}>
-  <Card title="Try a Payment" icon="money-bill" horizontal={false} href="https://api-reference.hyperswitch.io/v1/payments/payments--create">
-    Create your first payment using Hyperswitch APIs.
+  <Card title="Create a payment" icon="money-bill" horizontal={false} href="/v1/payments/payments--create">
+    Explore the backend request and response for creating a payment.
   </Card>
-  <Card title="Payment Flows" icon="receipt" horizontal={false} href="https://api-reference.hyperswitch.io/v1/payments/payment--flows">
-    Discover how to process one-time and recurring payments, save payment methods, and more.
+  <Card title="Payment flows" icon="receipt" horizontal={false} href="/v1/payments/payment--flows">
+    Understand payment authorization, capture, and recurring flows.
   </Card>
-  <Card title="Save a payment method" icon="vault" iconType="regular" horizontal={false} href="https://api-reference.hyperswitch.io/v1/payment-methods/paymentmethods--create">
-    Save customer payment methods securely for future transactions
+  <Card title="Save a payment method" icon="vault" iconType="regular" horizontal={false} href="/v1/payment-methods/paymentmethods--create">
+    Review the API for customer-linked payment methods.
   </Card>
-  <Card title="Self Hosted?" icon="circle-down" horizontal={false} href="https://api-reference.hyperswitch.io/v1/organization/organization--create">
-    Host Hyperswitch on-premise? Utilize our full API suite.
+  <Card title="Create an organization" icon="building" horizontal={false} href="/v1/organization/organization--create">
+    Review account setup for a separately configured backend deployment.
   </Card>
 </CardGroup>
 
-## Environment
+## Environments
 
-We have a testing environment referred to <Tooltip tip="Testing environment!">"sandbox</Tooltip>," which you can set up to test API calls without affecting production data. You can sign up on our Dashboard to get API keys to access Hyperswitch API.
+Use the base URL of your deployed backend. The preserved OpenAPI definitions include these upstream Hyperswitch service URLs; they are references to upstream services, not hosted Avenra environments:
 
-Use the following base URLs when making requests to the APIs:
+| Upstream environment | Base URL |
+| --- | --- |
+| Hyperswitch sandbox | https://sandbox.hyperswitch.io |
+| Hyperswitch production | https://api.hyperswitch.io |
 
-| Environment | Base URL                       |
-| ----------- | ------------------------------ |
-| Sandbox     | https://sandbox.hyperswitch.io |
-| Production  | https://api.hyperswitch.io     |
-
-<Note>
-  If you **do not hold a PCI certification** to collect and store card data on your servers, we recommend using [**Unified Checkout**](https://hyperswitch.io/docs/sdkIntegrations/unifiedCheckoutWeb/#unified-checkout) to accept card information from users.
-</Note>
+For local development, use the backend address printed by your setup workflow. Credentials belong to that deployment and its merchant accounts. The [existing setup script](https://github.com/jaimedhenriques/hyperswitch/blob/main/scripts/setup.sh) runs the backend infrastructure separately from the Avenra web app.
 
 ## Authentication and API keys
 
-Hyperswitch authenticates your API requests using your account’s API keys. Each account has two API keys for authentication:
+The backend authenticates API requests using merchant-account API keys. Obtain keys from the Control Center for your configured deployment. These upstream key formats and API identifiers are preserved for compatibility:
 
-| Key                  | Example         | When to Use                                                                                                                              |
-| -------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Secret key (API-key) | `snd_c69***`    | Used to authenticate API requests from your merchant server. **Don’t expose this key** on a website or embed it in a mobile application. |
-| Publishable key      | `pk_snd_3b3***` | Used to authenticate API requests from your app’s client. Can be publicly-accessible in your web or mobile app’s client-side code.       |
+| Key | Example | Usage |
+| --- | --- | --- |
+| Secret key (`api-key`) | `snd_c69***` | Authenticate requests from your merchant server. Keep this key out of browser and mobile application code. |
+| Publishable key | `pk_snd_3b3***` | Authenticate supported client-side requests. |
 
-<Check>
-  Get your [API key](https://app.hyperswitch.io/developers?tabIndex=1) and [Publishable Key](https://app.hyperswitch.io/home)
-</Check>
-
-<Check>
-  [Postman Collection](https://www.postman.com/hyperswitch/workspace/hyperswitch-development/collection/25176162-630b5353-7002-44d1-8ba1-ead6c230f2e3)
-</Check>
+Review [authentication](/essentials/authentication) and [API key creation](/v1/api-key/api-key--create) for request details. The keys shown above are illustrative prefixes, not usable credentials.
 
 ## Payment Status Lifecycle
 
-Hyperswitch handles the complex functionality of a comprehensive payments flow through the Payments object that transitions through multiple states during its payments lifecycle. Given below are the various statuses a payment can have:
+The inherited payment backend represents a payment with a Payments object. It transitions through the following statuses as payment processing progresses:
 
 | Payment Status           | Description                                                                                                                                                                                                 |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -85,7 +79,7 @@ Hyperswitch handles the complex functionality of a comprehensive payments flow t
 
 ## Redirect URL
 
-This is what a url looks like after redirection
+This preserved upstream example shows a URL after redirection. Configure the actual return URL for your deployment:
 
 `https://app.hyperswitch.io?status=succeeded&payment_intent_client_secret=pay_NCv9vc19f8aa75OpFxH8_secret_V4zAc7V0C8WAw6FECMKM&amount=10000&manual_retry_allowed=false&signature=4fae0cfa775e4551db9356563d4b98b55662fe3c1c945fe215d90ccf3541282c535909ae901d82174d6b1e46ba1684aa0aa4c8861be0e2a9ef6f950a975d5014&signature_algorithm=HMAC-SHA512`
 

@@ -9,7 +9,7 @@ body > div {
 body {
   font-family: "Montserrat";
   background-color: var(--primary-color);
-  color: #333;
+  color: #153c32;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -30,11 +30,11 @@ body > div {
   display: flex;
   flex-flow: column;
   font-family: "Montserrat";
-  width: auto;
-  min-width: 400px;
+  width: calc(100vw - 32px);
+  min-width: 0;
   max-width: 800px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 #hyper-checkout-status-header {
@@ -48,14 +48,14 @@ body > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
   font-weight: 600;
   padding: 15px 20px;
 }
 
 .hyper-checkout-status-amount {
   font-family: "Montserrat";
-  font-size: 35px;
+  font-size: clamp(24px, 5vw, 35px);
   font-weight: 700;
 }
 
@@ -93,13 +93,13 @@ body > div {
   margin-top: 10px;
   font-size: 14px;
   font-weight: 500;
-  max-width: 400px;
+  max-width: min(400px, calc(100vw - 72px));
 }
 
 .hyper-checkout-status-details {
   display: flex;
   flex-flow: column;
-  margin-top: 20px;
+  margin: 20px 16px 0;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   max-width: calc(100vw - 40px);
@@ -139,6 +139,33 @@ body > div {
 
 .hidden {
   display: none;
+}
+
+::selection {
+  background: #d7ef8a;
+  color: #153c32;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #153c32;
+  outline-offset: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hyper-checkout-status-merchant-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  #hyper-checkout-status-content {
+    min-height: 360px;
+  }
+
+  .hyper-checkout-status-image {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .ellipsis-container-2 {

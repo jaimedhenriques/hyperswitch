@@ -574,7 +574,7 @@ sts_role_session_name = ""
 [user]
 password_validity_in_days = 90
 two_factor_auth_expiry_in_secs = 300
-totp_issuer_name = "Hyperswitch Dev"
+totp_issuer_name = "Avenra Dev"
 base_url = "http://localhost:8080"
 force_two_factor_auth = false
 force_cookies = false
@@ -1648,11 +1648,11 @@ base_url = "http://127.0.0.1:8080" #Base URL
 file_storage_backend = "file_system" # Theme storage backend to be used
 
 [theme.email_config]
-entity_name = "Hyperswitch"                                                      # Display name in emails
-entity_logo_url = "https://app.hyperswitch.io/email-assets/HyperswitchLogo.png"  # Logo URL for emails
-foreground_color = "#111326"                                                     # Text color
-primary_color = "#006DF9"                                                        # Primary color
-background_color = "#FFFFFF"                                                     # Email background color
+entity_name = "Avenra"                                                      # Display name in emails
+entity_logo_url = ""                                                           # Optional publicly hosted logo; text wordmark is used when empty
+foreground_color = "#153c32"                                                     # Text color
+primary_color = "#153c32"                                                        # Primary color
+background_color = "#f7f8f2"                                                     # Email background color
 
 [platform]
 enabled = true

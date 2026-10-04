@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-variable.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #153c32;
+  background: #f7f8f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #153c32;
+  --green: #1d5c45;
+  --lime: #d7ef8a;
+  --paper: #f7f8f2;
+  --muted: #66736c;
+  --line: #e2e7df;
+  --white: #ffffff;
+  --radius: 12px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+button, select { cursor: pointer; }
+button { color: inherit; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+input, textarea { caret-color: var(--green); }
+input::placeholder { color: var(--muted); opacity: 1; }
+::selection { color: var(--ink); background: var(--lime); }
+:focus-visible { outline: 3px solid #438467; outline-offset: 4px; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #b3c2b6; border: 2px solid var(--paper); border-radius: 8px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+svg { flex-shrink: 0; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; border-radius: 8px; border: 1px solid transparent; font-weight: 650; font-size: 14px; text-decoration: none; transition: background .2s, color .2s; }
+.button-primary { background: var(--ink); color: white; }
+.button-primary:hover { background: var(--green); }
+.button-secondary { background: white; border-color: var(--line); color: var(--ink); }
+.button-secondary:hover { background: #eef2e8; }
+.icon-button { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 8px; background: white; }
+.icon-button:hover { background: #eef2e8; }
+.page-loading { display: grid; place-items: center; height: 100svh; font-weight: 600; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

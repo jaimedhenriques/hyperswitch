@@ -1,160 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your access has changed</title>
+  </head>
+  <body style="margin:0;padding:0;background:{background_color};color:{foreground_color};font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:{background_color};">
+      <tr><td align="center" style="padding:24px 16px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;text-align:left;">
+          <tr><td style="padding:16px 0 28px;border-bottom:1px solid #cbd4c7;">
+            {entity_logo_html}
+            <span style="color:{foreground_color};font-size:30px;font-weight:700;line-height:36px;letter-spacing:-0.6px;overflow-wrap:anywhere;">{entity_name}</span>
+          </td></tr>
+          <tr><td style="padding:32px 0 16px;">
+            <h1 style="margin:0;color:{foreground_color};font-size:28px;line-height:36px;font-weight:600;">Your access has changed.</h1>
+          </td></tr>
+          <tr><td style="color:{foreground_color};font-size:16px;line-height:26px;overflow-wrap:anywhere;">
+            <p style="margin:0 0 20px;">Hi {username},</p><p style="margin:0 0 20px;">Your <strong>{role_name}</strong> role has been removed from this {entity_type} in {entity_name}.</p><ul style="margin:0 0 20px;padding-left:24px;word-break:break-word;">{lineage_info}</ul><p style="margin:0 0 20px;">If you still need access, contact your team administrator.</p>
+          </td></tr>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Access Removed - {entity_name}</title>
-</head>
-
-<body style="
-      background-color: #f8f9fb;
-      height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-    ">
-  <div style="
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        background-color: #f8f9fb;
-      ">
-    <table style="text-align: center; width: 100%">
-      <tr>
-        <td style="height: 6px"></td>
-      </tr>
-      <tr>
-        <td style="text-align: center">
-          <table style="
-                background-color: {background_color};
-                text-align: center;
-                max-width: 55%;
-                margin: auto;
-              ">
-            <tr>
-              <td style="height: 20px"></td>
-            </tr>
-            <tr>
-              <td>
-                <table style="width: 100%">
-                  <tr>
-                    <td style="text-align: center">
-                      <img src={entity_logo_url} alt={entity_name} style="
-                            text-align: center;
-                            height: auto;
-                            width: 4rem;
-                          " />
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 40px"></td>
-            </tr>
-            <tr>
-              <td style="
-                    font-size: 2.02rem;
-                    font-weight: 600;
-                    line-height: 2.5rem;
-                    color: {foreground_color};
-                    min-width: 550px;
-                  ">
-                Access Removed
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 20px"></td>
-            </tr>
-            <tr>
-              <td style="
-                    color: {foreground_color};
-                    opacity: 0.8;
-                    width: 50%;
-                    font-size: 1.02rem;
-                    font-weight: 400;
-                    line-height: 1.4rem;
-                    min-width: 300px;
-                  ">
-                <table style="
-                      width: 70%;
-                      min-width: 400px;
-                      text-align: start;
-                      margin: auto;
-                    ">
-                  <tr>
-                    <td style="padding: 0 15px text-align: center">
-                      <p>Dear {username},</p>
-                      <p>
-                        This is to inform you that your access has been revoked for the following role:
-                      </p>
-                      <table style="
-                            width: 100%;
-                            margin: 15px 0;
-                            border: 1px solid {foreground_color};
-                            border-opacity: 0.2;
-                            border-radius: 8px;
-                            padding: 15px;
-                          ">
-                        <tr>
-                          <td style="padding: 8px 15px">
-                            <strong>Role:</strong> {role_name}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 8px 15px">
-                            <strong>Entity Type:</strong> {entity_type}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 8px 15px">
-                            <strong>Access Level:</strong>
-                            <ul
-                              style="
-                                list-style-type: none;
-                                padding-left: 0;
-                                margin: 8px 0 0 0;
-                                text-align: left;
-                                gap: 8px;
-                              "
-                            >
-                              {lineage_info}
-                            </ul>
-                          </td>
-                        </tr>
-                      </table>
-                      <p>
-                        You no longer have access to the resources and permissions associated with this role.
-                        If you believe this is an error or have any questions, please contact your administrator.
-                      </p>
-                      <p>
-                        If you need assistance, please reach out to the support team.
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="height: 15px"></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Best regards,<br />
-                      {entity_name} Team
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 50px"></td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td style="height: 6px"></td>
-      </tr>
+          <tr><td style="padding:24px 0;border-top:1px solid #cbd4c7;color:{foreground_color};font-size:14px;line-height:22px;">
+            The {entity_name} team
+          </td></tr>
+        </table>
+      </td></tr>
     </table>
-  </div>
-</body>
-
+  </body>
 </html>

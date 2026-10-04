@@ -38,7 +38,7 @@ if (!isFramed) {
     var colorIconCardCvcError = paymentDetails.color_icon_card_cvc_error;
     var appearance = {
       variables: {
-        colorPrimary: paymentDetails.theme || "rgb(0, 109, 249)",
+        colorPrimary: paymentDetails.theme || "#153c32",
         fontFamily: "Work Sans, sans-serif",
         fontSizeBase: "16px",
         colorText: "rgb(51, 65, 85)",

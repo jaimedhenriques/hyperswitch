@@ -1,4 +1,6 @@
-# Api Reference
+# Avenra API reference
+
+The Avenra documentation shell retains the upstream Hyperswitch API definitions and identifiers. The [introduction](introduction.mdx) explains the difference between the sample-data web workspace and a separately configured backend deployment. Brand colors, logos, repository links, and the favicon are configured in [docs.json](docs.json).
 
 We use the [openapi specification](https://swagger.io/specification) for the api reference. The openapi file is generated from the code base [openapi_spec_v1.json](v1/openapi_spec_v1.json).
 
@@ -42,6 +44,6 @@ cd api-reference
 npx @mintlify/scraping@latest openapi-file v1/openapi_spec_v1.json  -o v1
 ```
 
-This will generate files in [api-reference](api-reference) folder. These routes should be added to the [mint.json](mint.json) file under navigation, under respective group.
+This will generate route files in the current API reference folder. Add the routes to [docs.json](docs.json) under navigation in the appropriate group.
 
 NOTE: For working with V2 API reference, replace every occurrence of `v1` with `v2` in above commands

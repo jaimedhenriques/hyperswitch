@@ -1,0 +1,5 @@
+services:
+  avenra-web:
+    build: .
+    ports:
+      - "8088:80"
